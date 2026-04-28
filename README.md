@@ -1,10 +1,11 @@
 # Kyro-WebSite
-Página web oficial de Kyro, marca independiente de ropa y accesorios de estética alternativa.
+Página web oficial de Kyro, emprendimiento independiente de ropa y accesorios de estética alternativa.
 
-Este proyecto está bajo la licencia MIT. (Para mas informacion ver el apartado de "LICENSE".)
+Este proyecto está bajo la licencia MIT. (Para mas informacion, ver el apartado de "LICENSE".)
 
-Si utilizas este código, se agradece dar crédito a Kyro (@kyroshop.exe).
+Si utilizas este código, se agradece dar créditos a Kyro (@kyroshop.exe).
 
-La marca y el nombre "Kyro" no están autorizados para uso sin permiso. Sin embargo los diseños de nuestra marca o que pertenezcan a nostros si son de uso libre para el resto de vendedores o marcas, con esto queremos mostrar de que no nos limitamos a tener intenciones de patentar productos que basicamente cualquiera puede hacer en casa, cualquiera puede crear y cualquiera puede expresar.
+El nombre "Kyro" y sus diseños están autorizados para uso libre. 
+Aunque nos refiramos a nosotros mismos como "marca", técnicamente no lo somos. Usamos ese sobrenombre para mantener una formalidad, pero en sí somos una comunidad de personas con el objetivo de demostrar que la ropa no debe ser un medio de monetización tan costoso justamente por ser una "marca" y sacar más dinero del que realmente cuesta una prenda o accesorio. Con esto queremos mostrar que no nos limitamos a tener intenciones de patentar productos que básicamente cualquiera puede hacer en casa; cualquiera puede crear y cualquiera puede expresar.
 
 Gracias por su atención.
