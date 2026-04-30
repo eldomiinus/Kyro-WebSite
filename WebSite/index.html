@@ -1,60 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kyro Store</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Contenedor principal de la página -->
-  <div class="page-shell">
-    <!-- Sección principal del hero -->
-    <main class="hero">
-      <!-- Bloque de texto izquierdo -->
-      <div class="hero__content">
-        <!-- Título principal -->
-        <h1 class="hero__title">
-          Kyro <span>Store</span>
-        </h1>
 
-        <!-- Enlaces de contacto / redes -->
-        <div class="hero__links">
-          <a href="#instagram" class="hero__link">
-            <img src="Images/Instagram.png" alt="Instagram" />
-            <span>INSTAGRAM</span>
-          </a>
-          <a href="#mail" class="hero__link">
-            <img src="Images/Mail.png" alt="Mail" />
-            <span>MAIL</span>
-          </a>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyro Store</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-        <!-- Texto secundario -->
-        <p class="hero__description">
-          衣装を通し、自己表現の一部であれ。
-        </p>
+  <body>
+    <!-- # Página completa, centrada y con espacio alrededor -->
+    <div class="page-shell">
+      <!-- # Sección principal del hero con texto y mockups -->
+      <main class="hero">
+        <!-- # Columna izquierda de contenido -->
+        <section class="hero__info">
+          <!-- # Título principal en tipografía serif -->
+          <h1 class="hero__title">
+            Kyro<br /><span>Store</span>
+          </h1>
 
-        <!-- Nota de autor al final -->
-        <p class="hero__note">Página hecha por eldomiinus</p>
-      </div>
+          <!-- # Enlaces de contacto con formato de red social -->
+          <div class="hero__contacts">
+            <a href="#instagram" class="hero__contact-link">
+              <img src="Images/Instagram.png" alt="Instagram" class="hero__contact-icon" />
+              <div class="hero__contact-text">
+                <span class="hero__contact-label">Seguinos en</span>
+                <span class="hero__contact-name">INSTAGRAM</span>
+              </div>
+            </a>
+            <a href="#mail" class="hero__contact-link">
+              <img src="Images/Mail.png" alt="Mail" class="hero__contact-icon" />
+              <div class="hero__contact-text">
+                <span class="hero__contact-label">Contáctanos por</span>
+                <span class="hero__contact-name">MAIL</span>
+              </div>
+            </a>
+          </div>
 
-      <!-- Bloque visual derecho con mockups -->
-      <div class="hero__visual">
-        <div class="hero__phone hero__phone--left">
-          <img
-            src="Images/iPhone 12 Pro 1.png"
-            alt="Kyro Store mockup 1"
-          />
-        </div>
-        <div class="hero__phone hero__phone--right">
-          <img
-            src="Images/iPhone 12 Pro 2.png"
-            alt="Kyro Store mockup 2"
-          />
-        </div>
-      </div>
-    </main>
-  </div>
-</body>
+          <!-- # Frase secundaria en japonés -->
+          <p class="hero__subtitle">衣装を通し、自己表現の一部であれ。</p>
+
+          <!-- # Nota de crédito del autor -->
+          <p class="hero__credit">Página hecha por @eldomiinus</p>
+        </section>
+
+        <!-- # Columna derecha con los mockups de iPhone -->
+        <section class="hero__mockups">
+          <div class="hero__mockup hero__mockup--main">
+            <img src="Images/iPhone 12 Pro 1.png" alt="Mockup Kyro Store" />
+          </div>
+          <div class="hero__mockup hero__mockup--secondary">
+            <img src="Images/iPhone 12 Pro 2.png" alt="Mockup October Collection" />
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+
 </html>
