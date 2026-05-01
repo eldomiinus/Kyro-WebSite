@@ -97,7 +97,17 @@ a {
   text-decoration: none;
 }
 
-.hero__contact-icon {
+.hero__contact-icon_instagram {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hero__contact-icon_mail {
+  position: relative;
+  top: -70px;  /* Se mueve 20px hacia abajo desde su sitio original */
+  left: 230px;
   width: 36px;
   height: 36px;
   object-fit: contain;
@@ -110,14 +120,35 @@ a {
   gap: 4px;
 }
 
-.hero__contact-label {
+.hero__contact-label_instagram {
   font-size: 0.82rem;
   letter-spacing: 0.12em;
   color: var(--muted);
   text-transform: capitalize;
 }
 
-.hero__contact-name {
+.hero__contact-label_mail {
+  position: relative;
+  top: -70px;  /* Se mueve 20px hacia abajo desde su sitio original */
+  left: 230px;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  text-transform: capitalize;
+}
+
+.hero__contact-name_instagram {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero__contact-name_mail {
+  position: relative;
+  top: -70px;  /* Se mueve 20px hacia abajo desde su sitio original */
+  left: 230px;
   font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.16em;
