@@ -7,13 +7,13 @@
 
 /* # Variables de color y tipografía */
 :root {
-  --background: #f5f6f8;
+  --background: #9e9e9e;
   --surface: #ffffff;
   --text: #111111;
   --muted: #5d5d5d;
   --shadow: rgba(17, 24, 39, 0.12);
   --accent: #111111;
-  --radius: 32px;
+  --radius: 10px;
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -39,140 +39,180 @@ a {
 
 /* # Contenedor principal: centra el hero en la pantalla */
 .page-shell {
-  min-height: 2000px;
-  display: flex;
-  align-items: high;
-  justify-content: center;
-  padding: 10px;
-  background: var(--background);
-}
-
-/* # Layout principal con dos columnas */
-.hero {
-  width: min(1920px, 100%);
+  min-height: 1990px;
+  max-height: 1990px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 140px;
+  gap: 0px;
+  padding: 50px 50px;
   background: var(--surface);
   border-radius: var(--radius);
-  padding: 120px 140px;
   box-shadow: 0 16px 48px rgba(17, 24, 39, 0.06);
-  margin: 0 auto;
-  height: 100%;
-  align-items: center;
+  max-width: 1920px;
+  margin: 10px;
 }
 
 .hero__info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 60px; /* Controla el espacio entre logo, contactos y subtitulo */
+  padding-left: 50px; /* Esto mueve TODO a la derecha sin usar translate en cada uno */
+  padding-top: 20px;
+}
+
+/* Nuevo contenedor del logo */
+.hero__title-logo {
+  /* Mantenemos un margen abajo similar al que tenía el texto */
+  margin-bottom: 0px; 
+}
+
+/* Estilo específico para la imagen del logo */
+.hero__logo-img {
+  max-width: min(700px, 100%); 
+  height: auto;
+  display: block;
+  
+  /* En lugar de transform, usamos margenes para ubicarlo */
+  margin-left: -10px; 
+  margin-top: 20px;
+}
+
+/* Ajuste para celulares en tu Media Query existente */
+@media (max-width: 760px) {
+  .hero__logo-img {
+    /* En celulares, hacemos el logo un poco más chico */
+    max-width: 280px;
+  }
+}
+
+/* CONTACTOS */
+.hero__contacts {
+  display: flex;
+  flex-direction: row;
+  width: 570px;
+  height: 230px;
   gap: 60px;
 }
 
-/* # Título principal en serif grande */
-.hero__title {
-  font-size: clamp(4rem, 10vw, 7.5rem);
-  line-height: 0.85;
-  letter-spacing: -0.03em;
-  font-weight: 900;
-  font-family: "Cambria", "Georgia", "Times New Roman", serif;
-}
-
-.hero__title span {
-  display: block;
-}
-
-.hero__contacts {
+/* Objeto "Seguinos en Instagram" */
+.hero__contacts_instagram {
   display: flex;
-  flex-direction: column;
-  gap: 28px;
-  align-items: flex-start;
+  flex-direction: row;
+}
+
+.hero__contact-icon_instagram {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  transform: translateY(10%);
+}
+
+.hero__contact-label_instagram {
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.hero__contact-name_instagram {
+  font-family: "Inter-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 36px;
+  line-height: 24px;
+}
+
+
+
+/* Objeto "contactanos por mail" */
+.hero__contacts_mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.hero__contact-icon_mail {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  margin-bottom: -10px;
+}
+
+.hero__contact-label_mail {
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.hero__contact-name_mail {
+  font-family: "Inter-ExtraBold", Helvetica;
+  font-weight: 800;
+  color: #000000;
+  font-size: 36px;
+  line-height: 24px;
 }
 
 .hero__contact-link {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   color: var(--accent);
   text-decoration: none;
-}
-
-.hero__contact-icon_instagram {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.hero__contact-icon_mail {
-  position: relative;
-  top: -70px;  /* Se mueve 20px hacia abajo desde su sitio original */
-  left: 230px;
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  flex-shrink: 0;
 }
 
 .hero__contact-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-}
-
-.hero__contact-label_instagram {
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  text-transform: capitalize;
-}
-
-.hero__contact-label_mail {
-  position: relative;
-  top: -70px;  /* Se mueve 20px hacia abajo desde su sitio original */
-  left: 230px;
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-  text-transform: capitalize;
-}
-
-.hero__contact-name_instagram {
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.hero__contact-name_mail {
-  position: relative;
-  top: -70px;  /* Se mueve 20px hacia abajo desde su sitio original */
-  left: 230px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
+  gap: 0px;
 }
 
 .hero__subtitle {
-  max-width: 620px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--muted);
-  margin-top: 16px;
+  max-width: 360px;
+  max-height: 30px;
+  top: 730px;
+  left: 80px;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0px;
+  line-height: 20px;
+  color: #000000;
 }
 
 .hero__credit {
-  font-size: 0.95rem;
-  color: var(--muted);
-  margin-top: 12px;
+  flex-direction: row;
+  width: 220px;
+  height: 20px;
+  position: relative;
+  top: 90px;
+  left: 0px;
+  align-items: center;
+  font-family: "Poppins-Light", Helvetica;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 20px;
+  color: #0c0c0c;
+}
+
+.hero__link {
+  font-family: "Poppins-Regular", Helvetica;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .hero__mockups {
   position: relative;
   min-height: 900px;
+  max-height: 1000px;
+  justify-content: flex-start;
+  grid-column: 2;  /* Columna derecha */
 }
 
 .hero__mockup {
@@ -185,12 +225,14 @@ a {
 
 .hero__mockup--main {
   bottom: 30px;
-  left: 0;
+  top: 100px;
+  left: 100px;
   z-index: 2;
 }
 
 .hero__mockup--secondary {
   top: 0;
+  left: 400px;
   right: 0;
   z-index: 1;
 }
@@ -234,12 +276,6 @@ a {
 @media (max-width: 760px) {
   .page-shell {
     padding: 20px;
-  }
-
-  .hero {
-    padding: 32px 24px;
-    border-radius: 24px;
-    gap: 32px;
   }
 
   .hero__title {
