@@ -13,4 +13,4 @@ Creemos que la creatividad no debe estar limitada por barreras comerciales innec
 
 Actualmente, esta página se encuentra en desarrollo. En su estado actual, funciona principalmente como un espacio informativo y de presentación del proyecto, donde se detallan nuestros principios, procesos y objetivos a futuro.
 
-Gracias por su atención. :3
+Gracias por su atención :3
