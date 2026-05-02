@@ -1,7 +1,7 @@
 # Kyro - WebSite
 Página web oficial de Kyro, proyecto comunitario independiente de ropa y accesorios de estética alternativa.
 
-Este proyecto está bajo la licencia MIT. (Para mas informacion, ver el apartado de "LICENSE".)
+Este proyecto está bajo la licencia MIT.
 
 Si utilizas este código, se agradece dar créditos a Kyro (@kyroshop.exe).
 
