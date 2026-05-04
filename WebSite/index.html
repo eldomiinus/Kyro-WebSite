@@ -13,59 +13,59 @@
   
   <body>
     
-    <!-- # Página completa, centrada y con espacio alrededor -->
-    <div class="page-shell">
+    <!-- # Grid principal de 5x5 -->
+    <div class="parent">
+      <!-- Items 1-5: vacíos para layout -->
+      <div class="div1"></div>
+      <div class="div2"></div>
+      <div class="div3"></div>
+      <div class="div4"></div>
+      <div class="div5"></div>
       
-      <!-- # Columna izquierda de contenido -->
-    <section class="hero__info">
-          
-          <!-- # Título principal en tipografía serif -->
-          <h1 class="hero__title-logo">
-            <img src="Images/Kyro Store.png" draggable="false" alt="Kyro Store" class="hero__logo-img" />
-          </h1>
-          
-          <!-- # Enlaces de contacto y red social -->
-          <!-- # SIGUENOS EN INSTAGRAM -->
-          <div class="hero__contacts">
-            <div class="hero__contacts_instagram">
-              <a href="https://www.instagram.com/kyroshop.exe/?hl=es" target="_blank" draggable="false" class="hero__contact-link">
-                <img src="Images/Instagram.png" draggable="false" alt="Instagram" class="hero__contact-icon_instagram" />
-                <div class="hero__contact-text">
-                  <span class="hero__contact-label_instagram">Síguenos en</span>
-                  <span class="hero__contact-name_instagram">INSTAGRAM</span>
-                </div>
-              </a>
-            </div>
-            
-            <!-- # CONTACTANOS POR MAIL -->
-            <div class="hero__contacts_mail">
-              <a href="mailto:kyroshop.exe@gmail.com" target="_blank" draggable="false" class="hero__contact-link">
-                <img src="Images/Mail.png" draggable="false" alt="Mail" class="hero__contact-icon_mail" />
-                <div class="hero__contact-text">
-                  <span class="hero__contact-label_mail">Contáctanos por</span>
-                  <span class="hero__contact-name_mail">MAIL</span>
-                </div>
-              </a>
-            </div>
+      <!-- Item 6: Logo Kyro Store -->
+      <div class="div6">
+        <img src="Images/Kyro Store.png" draggable="false" alt="Kyro Store" class="hero__logo-img" />
+      </div>
+      
+      <!-- Item 7: Contacto Instagram -->
+      <div class="div7">
+        <a href="https://www.instagram.com/kyroshop.exe/?hl=es" target="_blank" draggable="false" class="hero__contact-link">
+          <img src="Images/Instagram.png" draggable="false" alt="Instagram" class="hero__contact-icon_instagram" />
+          <div class="hero__contact-text">
+            <span class="hero__contact-label_instagram">Síguenos en</span>
+            <span class="hero__contact-name_instagram">INSTAGRAM</span>
           </div>
-          
-          <!-- # Frase secundaria en japonés -->
-          <p class="hero__subtitle">衣装を通し、自己表現の一部であれ。</p>
-          
-          <!-- # Nota de créditos al autor -->
-          <p class="hero__credit">
-            <span>Página hecha por:</span>
-            <a href="https://github.com/eldomiinus" target="_blank" draggable="false" class="hero__link">@eldomiinus</a>
-          </p>
-    </section>
-    
-    
-    
-    <!-- # Columna derecha con los mockups de iPhone -->
-    <section class="hero__mockups">
-          <spline-viewer url="https://prod.spline.design/BCQTO-gZrrdxeHzo/scene.splinecode"></spline-viewer>
-    </section>
+        </a>
+      </div>
+      
+      <!-- Item 8: Contacto Mail -->
+      <div class="div8">
+        <a href="mailto:kyroshop.exe@gmail.com" target="_blank" draggable="false" class="hero__contact-link">
+          <img src="Images/Mail.png" draggable="false" alt="Mail" class="hero__contact-icon_mail" />
+          <div class="hero__contact-text">
+            <span class="hero__contact-label_mail">Contáctanos por</span>
+            <span class="hero__contact-name_mail">MAIL</span>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Item 9: Subtítulo en japonés -->
+      <div class="div9">
+        <p class="hero__subtitle">衣装を通し、自己表現の一部であれ。</p>
+      </div>
+      
+      <!-- Item 10: Créditos -->
+      <div class="div10">
+        <p class="hero__credit">
+          <span>Página hecha por:</span>
+          <a href="https://github.com/eldomiinus" target="_blank" draggable="false" class="hero__link">@eldomiinus</a>
+        </p>
+      </div>
     </div>
+    
+    <!-- Capa Spline por encima del grid -->
+    <spline-viewer url="https://prod.spline.design/BCQTO-gZrrdxeHzo/scene.splinecode" class="spline-overlay"></spline-viewer>
+    
   </body>
   
 </html>
