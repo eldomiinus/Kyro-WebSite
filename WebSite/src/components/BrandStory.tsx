@@ -1,8 +1,8 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Gem, Layers3, Paintbrush, RadioTower } from "lucide-react";
-import catMark from "../../Images/Cat - Rojo v2.png";
-import phoneOne from "../../Images/iPhone 12 Pro 1.png";
-import phoneTwo from "../../Images/iPhone 12 Pro 2.png";
+import catMark from "../assets/images/Cat - Rojo v2.png";
+import phoneOne from "../assets/images/iPhone 12 Pro 1.png";
+import phoneTwo from "../assets/images/iPhone 12 Pro 2.png";
 import { scrollToId } from "../utils/navigation";
 
 const reveal = {

@@ -1,8 +1,8 @@
 import { ArrowDown, Sparkles } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
 import { type CSSProperties, useState } from "react";
-import catMark from "../../Images/Cat - Rojo v2.png";
-import wordmark from "../../Images/Kyro Store.png";
+import catMark from "../assets/images/Cat - Rojo v2.png";
+import wordmark from "../assets/images/Kyro Store.png";
 import { scrollToId } from "../utils/navigation";
 
 export function Hero() {

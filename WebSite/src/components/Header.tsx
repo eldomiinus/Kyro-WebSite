@@ -1,6 +1,6 @@
 import { Heart, Instagram, Mail, ShoppingBag } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
-import wordmark from "../../Images/Kyro Store.png";
+import wordmark from "../assets/images/Kyro Store.png";
 import { scrollToId } from "../utils/navigation";
 
 type HeaderProps = {
