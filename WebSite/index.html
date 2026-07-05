@@ -1,71 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-  
-  <!-- # Encabezado de la página -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kyro.exe</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="Images/Cat - Rojo v2.png" draggable="false" type="image/x-icon">
+    <meta
+      name="description"
+      content="Kyro es una marca independiente de ropa y accesorios alternativos: streetwear, cyberpunk, Y2K, techwear y cultura japonesa con piezas hechas a mano."
+    />
+    <meta name="theme-color" content="#030305" />
+    <meta property="og:title" content="Kyro.exe | Ropa alternativa independiente" />
+    <meta
+      property="og:description"
+      content="Una experiencia web inmersiva para explorar la identidad, historia y drop demo de Kyro."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/Images/Cat%20-%20Rojo%20v2.png" />
+    <title>Kyro.exe | Ropa alternativa independiente</title>
+    <link rel="icon" href="/Images/Cat%20-%20Rojo%20v2.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@500;700;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.90/build/spline-viewer.js"></script>
   </head>
-  
   <body>
-    
-    <!-- # Grid principal de 5x5 -->
-    <div class="parent">
-      <!-- Items 1-5: vacíos para layout -->
-      <div class="div1"></div>
-      <div class="div2"></div>
-      <div class="div3"></div>
-      <div class="div4"></div>
-      <div class="div5"></div>
-      
-      <!-- Item 6: Logo Kyro Store -->
-      <div class="div6">
-        <img src="Images/Kyro Store.png" draggable="false" alt="Kyro Store" class="hero__logo-img" />
-      </div>
-      
-      <!-- Item 7: Contacto Instagram -->
-      <div class="div7">
-        <a href="https://www.instagram.com/kyroshop.exe/?hl=es" target="_blank" draggable="false" class="hero__contact-link">
-          <img src="Images/Instagram.png" draggable="false" alt="Instagram" class="hero__contact-icon_instagram" />
-          <div class="hero__contact-text">
-            <span class="hero__contact-label_instagram">Síguenos en</span>
-            <span class="hero__contact-name_instagram">INSTAGRAM</span>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Item 8: Contacto Mail -->
-      <div class="div8">
-        <a href="mailto:kyroshop.exe@gmail.com" target="_blank" draggable="false" class="hero__contact-link">
-          <img src="Images/Mail.png" draggable="false" alt="Mail" class="hero__contact-icon_mail" />
-          <div class="hero__contact-text">
-            <span class="hero__contact-label_mail">Contáctanos por</span>
-            <span class="hero__contact-name_mail">MAIL</span>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Item 9: Subtítulo en japonés -->
-      <div class="div9">
-        <p class="hero__subtitle">衣装を通し、自己表現の一部であれ。</p>
-      </div>
-      
-      <!-- Item 10: Créditos -->
-      <div class="div10">
-        <p class="hero__credit">
-          <span>Página hecha por:</span>
-          <a href="https://github.com/eldomiinus" target="_blank" draggable="false" class="hero__link">@eldomiinus</a>
-        </p>
-      </div>
-    </div>
-    
-    <!-- Capa Spline por encima del grid -->
-    <spline-viewer url="https://prod.spline.design/BCQTO-gZrrdxeHzo/scene.splinecode" class="spline-overlay"></spline-viewer>
-    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
-  
 </html>
