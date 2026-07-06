@@ -1,15 +1,19 @@
 import { Heart, Instagram, Mail, ShoppingBag } from "lucide-react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import wordmark from "../assets/images/Kyro Store.png";
+import type { Theme } from "../hooks/useTheme";
 import { scrollToId } from "../utils/navigation";
+import { ThemeToggle } from "./ThemeToggle";
 
 type HeaderProps = {
   cartCount: number;
   favoriteCount: number;
   onOpenCart: () => void;
+  theme: Theme;
+  onToggleTheme: () => void;
 };
 
-export function Header({ cartCount, favoriteCount, onOpenCart }: HeaderProps) {
+export function Header({ cartCount, favoriteCount, onOpenCart, theme, onToggleTheme }: HeaderProps) {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 24, restDelta: 0.001 });
 
@@ -47,6 +51,7 @@ export function Header({ cartCount, favoriteCount, onOpenCart }: HeaderProps) {
           <ShoppingBag size={18} />
           {cartCount > 0 ? <span>{cartCount}</span> : null}
         </button>
+        <ThemeToggle theme={theme} onToggle={onToggleTheme} />
       </div>
     </header>
   );

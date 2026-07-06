@@ -10,6 +10,7 @@ import { Marketplace } from "./components/Marketplace";
 import { QuickView } from "./components/QuickView";
 import { products } from "./data/products";
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import { useTheme } from "./hooks/useTheme";
 import type { CartItem, Product } from "./types";
 import { formatPrice } from "./utils/format";
 
@@ -19,6 +20,7 @@ export default function App() {
   const [cart, setCart] = useLocalStorage<CartItem[]>("kyro:cart", []);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     if (shouldReduceMotion) return;
@@ -108,7 +110,13 @@ export default function App() {
       animate={shouldReduceMotion ? undefined : { opacity: 1 }}
       transition={{ duration: 0.45 }}
     >
-      <Header cartCount={cartCount} favoriteCount={favorites.length} onOpenCart={() => setIsCartOpen(true)} />
+      <Header
+        cartCount={cartCount}
+        favoriteCount={favorites.length}
+        onOpenCart={() => setIsCartOpen(true)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+      />
       <main>
         <Hero />
         <BrandStory />

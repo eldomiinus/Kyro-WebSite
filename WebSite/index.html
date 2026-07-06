@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
       name="description"
       content="Kyro es una marca independiente de ropa y accesorios alternativos: streetwear, cyberpunk, Y2K, techwear y cultura japonesa con piezas hechas a mano."
     />
-    <meta name="theme-color" content="#030305" />
+    <meta name="theme-color" content="#780606" />
     <meta property="og:title" content="Kyro.exe | Ropa alternativa independiente" />
     <meta
       property="og:description"
@@ -24,6 +24,18 @@
       rel="stylesheet"
     />
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.90/build/spline-viewer.js"></script>
+    <script>
+      // Aplica el tema antes del primer paint para evitar parpadeo (FOUC).
+      (function () {
+        try {
+          var stored = localStorage.getItem("kyro:theme");
+          var theme = stored === "light" || stored === "dark" ? stored : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (_) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
