@@ -1,107 +1,110 @@
-<!-- =============================================================================
-     KYRO — Licencia del proyecto
-     Este archivo combina una guía legible en lenguaje claro con el texto
-     legal completo de la licencia MIT. El bloque legal al final no debe
-     modificarse: es el texto oficial reconocido internacionalmente.
-     ============================================================================= -->
+================================================================================
+                              KYRO — Licencia del proyecto
+================================================================================
 
-<div align="center">
+  Uso libre  ·  Modificación libre  ·  Distribución libre
 
-# Licencia Kyro
+  Proyecto comunitario de ropa alternativa.
+  Código, sitio web y diseños publicados bajo licencia MIT.
 
-**Uso libre · Modificación libre · Distribución libre**
+  "Cualquiera puede crear y cualquiera puede expresar."
 
-[![Licencia MIT](https://img.shields.io/badge/Licencia-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![SPDX](https://img.shields.io/badge/SPDX-MIT-lightgrey)](https://spdx.org/licenses/MIT.html)
+  Contexto del proyecto .......... README.md
+  Recursos descargables .......... WebSite/pages/resources.html
+  Texto legal completo ........... ver sección al final de este archivo
 
-_Proyecto comunitario de ropa alternativa — código, sitio web y diseños publicados bajo MIT._
 
-[← Volver al README](./README.md) · [Texto legal ↓](#texto-legal-de-la-licencia-mit)
+--------------------------------------------------------------------------------
+  ¿QUÉ CUBRE ESTA LICENCIA?
+--------------------------------------------------------------------------------
 
-</div>
+  Todo el contenido publicado en este repositorio se distribuye bajo MIT:
 
----
+  · Código fuente
+      HTML, CSS, JavaScript y demás archivos del sitio web.
 
-## ✦ ¿Qué cubre esta licencia?
+  · Diseños gráficos
+      Estampas, logos, fuentes y recursos descargables del proyecto.
 
-Todo el contenido publicado en este repositorio se distribuye bajo la **licencia MIT**, incluyendo:
+  · Documentación
+      README, guías y archivos de referencia incluidos en el repositorio.
 
-| Ámbito | Qué incluye |
-| --- | --- |
-| 💻 **Código fuente** | HTML, CSS, JavaScript y demás archivos del sitio web |
-| 🎨 **Diseños gráficos** | Estampas, logos, fuentes y recursos descargables en [`WebSite/pages/resources.html`](./WebSite/pages/resources.html) |
-| 📄 **Documentación** | README, guías y archivos de referencia del proyecto |
-| 🧩 **Plantilla** | La estructura completa del sitio como base reutilizable |
+  · Plantilla del sitio
+      La estructura completa como base reutilizable para otros proyectos.
 
-El nombre **"Kyro"** y sus diseños están disponibles para **uso libre**, en línea con la filosofía del proyecto: _cualquiera puede crear y cualquiera puede expresar._
+  El nombre "Kyro" y sus diseños están disponibles para uso libre, en línea
+  con la filosofía del proyecto: la ropa no debería ser un medio de
+  monetización abusivo.
 
----
 
-## ✔ Qué podés hacer
+--------------------------------------------------------------------------------
+  QUÉ PODÉS HACER
+--------------------------------------------------------------------------------
 
-Con esta licencia tenés permiso explícito para:
+  Con esta licencia tenés permiso explícito para:
 
-```
-✔ Usar el código y los diseños en proyectos personales o comerciales
-✔ Modificar, adaptar y combinar con tu propio trabajo
-✔ Distribuir copias originales o modificadas
-✔ Sublicenciar o incluir en productos derivados
-✔ Vender prendas, accesorios u otros productos que usen estos diseños
-✔ Montar tu propia marca o tienda usando esta plantilla como base
-```
+  [✓] Usar el código y los diseños en proyectos personales o comerciales
+  [✓] Modificar, adaptar y combinar con tu propio trabajo
+  [✓] Distribuir copias originales o modificadas
+  [✓] Sublicenciar o incluir en productos derivados
+  [✓] Vender prendas, accesorios u otros productos que usen estos diseños
+  [✓] Montar tu propia marca o tienda usando esta plantilla como base
 
-No necesitás pedir permiso por adelantado. La licencia MIT está pensada para maximizar la libertad de uso.
+  No necesitás pedir permiso por adelantado.
 
----
 
-## ⚠ Qué debés cumplir
+--------------------------------------------------------------------------------
+  QUÉ DEBÉS CUMPLIR
+--------------------------------------------------------------------------------
 
-La única condición obligatoria es **mantener el aviso de copyright y la licencia** en cualquier copia o porción sustancial del material:
+  La única condición obligatoria es mantener el aviso de copyright y la
+  licencia en cualquier copia o porción sustancial del material:
 
-```
-✔ Incluir el aviso de copyright original ("Copyright (c) 2026 Kyro")
-✔ Incluir el texto completo de esta licencia MIT
-✔ No eliminar ni ocultar los créditos cuando redistribuyas el trabajo
-```
+  [✓] Incluir el aviso de copyright original ("Copyright (c) 2026 Kyro")
+  [✓] Incluir el texto completo de esta licencia MIT
+  [✓] No eliminar ni ocultar los créditos cuando redistribuyas el trabajo
 
-**Ejemplo mínimo** al redistribuir un archivo derivado:
+  Ejemplo mínimo al redistribuir un archivo derivado:
 
-```
-Copyright (c) 2026 Kyro
-Licenciado bajo MIT — ver LICENSE en el repositorio original.
-Modificaciones: [tu nombre / tu proyecto] — [año]
-```
+      Copyright (c) 2026 Kyro
+      Licenciado bajo MIT — ver LICENSE en el repositorio original.
+      Modificaciones: [tu nombre / tu proyecto] — [año]
 
----
 
-## ✕ Qué no cubre la licencia
+--------------------------------------------------------------------------------
+  QUÉ NO CUBRE LA LICENCIA
+--------------------------------------------------------------------------------
 
-La licencia MIT **no** implica garantía ni responsabilidad por parte de Kyro:
+  La licencia MIT no implica garantía ni responsabilidad por parte de Kyro:
 
-| La licencia **no** garantiza | Significa que… |
-| --- | --- |
-| 🛡 Calidad o idoneidad | El material se entrega _"tal cual"_ (`AS IS`) |
-| 🔧 Soporte técnico | No hay obligación de mantener ni actualizar el proyecto |
-| ⚖ Indemnización | Los autores no responden por daños derivados del uso |
+  · Calidad o idoneidad
+      El material se entrega "tal cual" (AS IS).
 
-Usá el material bajo tu propio criterio y responsabilidad.
+  · Soporte técnico
+      No hay obligación de mantener ni actualizar el proyecto.
 
----
+  · Indemnización
+      Los autores no responden por daños derivados del uso.
 
-## 🔗 Referencias
+  Usá el material bajo tu propio criterio y responsabilidad.
 
-- Texto oficial MIT → [opensource.org/licenses/MIT](https://opensource.org/licenses/MIT)
-- Identificador SPDX → [spdx.org/licenses/MIT.html](https://spdx.org/licenses/MIT.html)
-- Recursos descargables del proyecto → [`WebSite/pages/resources.html`](./WebSite/pages/resources.html)
-- Filosofía y contexto del proyecto → [`README.md`](./README.md)
 
----
+--------------------------------------------------------------------------------
+  REFERENCIAS
+--------------------------------------------------------------------------------
 
-## Texto legal de la licencia MIT
+  Texto oficial MIT .............. https://opensource.org/licenses/MIT
+  Identificador SPDX ............. https://spdx.org/licenses/MIT.html
 
-_El siguiente bloque es el texto legal completo y vinculante. Debe conservarse sin alteraciones en redistribuciones._
 
----
+================================================================================
+                         TEXTO LEGAL DE LA LICENCIA MIT
+================================================================================
+
+  El siguiente bloque es el texto legal completo y vinculante.
+  Debe conservarse sin alteraciones en redistribuciones.
+
+--------------------------------------------------------------------------------
 
 MIT License
 
@@ -125,12 +128,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
----
+--------------------------------------------------------------------------------
 
-<div align="center">
+  Kyro — Crea, usa, comparte.
 
-**Kyro** — _Crea, usa, comparte._
-
-_La ropa no debería ser un medio de monetización abusivo._
-
-</div>
+================================================================================
