@@ -1,0 +1,50 @@
+/* =====================================================================
+   KYRO — account.css
+   Layout del login + registro.
+   ===================================================================== */
+
+.auth-container {
+  max-width: var(--container-max);
+  margin: var(--space-5) auto;
+  padding: 0 var(--space-4);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-4);
+}
+
+.auth-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+}
+
+.auth-form { display: grid; gap: var(--space-3); margin-top: var(--space-3); }
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form input[type="text"] {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.auth-form input:focus { background: var(--color-bg); border-color: var(--color-accent); }
+.auth-form .checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text);
+  font-size: 0.85rem;
+}
+.form-feedback { color: var(--color-muted); font-size: 0.85rem; margin: 0; min-height: 1.2em; }
+.form-feedback.is-error { color: var(--color-accent); }
+.form-feedback.is-success { color: var(--color-success); }

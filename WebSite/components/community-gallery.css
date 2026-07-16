@@ -1,0 +1,54 @@
+/* =====================================================================
+   KYRO — community-gallery.css
+   Estilo de la "Galería Comunitaria" (reemplaza al sistema de reseñas).
+   ===================================================================== */
+
+.community-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.community-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.community-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: var(--color-surface);
+}
+.community-card-body {
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.community-card-user {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.community-card-meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+.community-card-caption {
+  font-size: 0.9rem;
+  margin-top: var(--space-1);
+  color: var(--color-text);
+}
+
+.community-feed { padding: 0 var(--space-4) var(--space-5); max-width: var(--container-max); margin: 0 auto; }
+.community-cta {
+  text-align: center;
+  padding: var(--space-6) var(--space-4);
+  background: var(--color-accent-soft);
+  border-radius: var(--radius-md);
+  margin: var(--space-5) auto;
+  max-width: var(--container-max);
+}
+.community-cta h2 { color: var(--color-accent); }

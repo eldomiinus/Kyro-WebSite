@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================================
+         KYRO - Página individual de producto
+         Estructura semántica con:
+         - Bloque "Transparencia de Costos"
+         - "Galería Comunitaria" en lugar de reseñas tradicionales
+         Los datos se cargan vía ?id=xxx y /assets/js/data.js
+         ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Producto — Kyro</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../components/navbar.css" />
+    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="../components/cart.css" />
+    <link rel="stylesheet" href="../components/product-detail.css" />
+    <link rel="stylesheet" href="../components/community-gallery.css" />
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <main id="product-detail" class="product-detail">
+        <!-- Renderizado por assets/js/product-detail.js -->
+        <p class="loading">Cargando producto…</p>
+    </main>
+
+    <div id="footer-root"></div>
+    <aside id="side-cart" class="side-cart" aria-hidden="true"></aside>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/cart.js"></script>
+    <script src="../assets/js/product-detail.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

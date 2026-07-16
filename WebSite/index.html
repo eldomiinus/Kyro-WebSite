@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================================
+         KYRO - Página de Inicio
+         Estructura base del esqueleto. Los estilos y datos dinámicos
+         se inyectan desde /assets/css y /assets/js para mantener
+         este archivo limpio y semántico.
+         ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kyro — Marca comunitaria independiente. Ropa y accesorios alternativos, hechos a mano y bajo licencia abierta." />
+    <title>Kyro — Crea, usa, comparte</title>
+
+    <!-- Estilos base: variables, reset y layout. -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="components/navbar.css" />
+    <link rel="stylesheet" href="components/footer.css" />
+    <link rel="stylesheet" href="components/cart.css" />
+</head>
+<body>
+    <!-- =========================================================
+         NAVBAR (inyectada por JS para reuso en todas las páginas)
+         El placeholder permite ver la estructura incluso sin JS.
+         ========================================================= -->
+    <div id="navbar-root"></div>
+
+    <main>
+        <!-- HERO: Mensaje principal de la marca -->
+        <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Ropa sin abuso. Diseños sin candado.</h1>
+            <p>
+                Kyro es un proyecto comunitario. Ropa alternativa hecha a mano,
+                publicada bajo licencia MIT para que cualquiera pueda crearla en casa.
+            </p>
+            <a href="pages/catalog.html" class="btn-primary">Ver catálogo</a>
+        </section>
+
+        <!-- PILARES: tres bloques que resumen la filosofía -->
+        <section class="pillars" aria-labelledby="pillars-title">
+            <h2 id="pillars-title">Nuestra filosofía</h2>
+            <div class="pillars-grid">
+                <article class="pillar">
+                    <h3>Transparencia</h3>
+                    <p>Cada precio muestra su costo real: prenda, tinta y trabajo.</p>
+                </article>
+                <article class="pillar">
+                    <h3>Comunidad</h3>
+                    <p>Las personas usuarias publican sus propias fotos y versiones.</p>
+                </article>
+                <article class="pillar">
+                    <h3>Open Source</h3>
+                    <p>Diseños libres. Bájalo, imprímelo, modifícalo. Es tuyo.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- DESTACADOS: productos mostrados desde la grilla del catálogo -->
+        <section class="featured" aria-labelledby="featured-title">
+            <h2 id="featured-title">Destacados</h2>
+            <div id="featured-grid" class="products-grid">
+                <!-- Las tarjetas se renderizan con /assets/js/products.js -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (inyectado por JS) -->
+    <div id="footer-root"></div>
+
+    <!-- Carrito lateral (side-cart). Se muestra/oculta con cart.js -->
+    <aside id="side-cart" class="side-cart" aria-hidden="true" aria-label="Carrito de compras"></aside>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <!-- Scripts modulares: el orden importa. -->
+    <script src="assets/js/data.js"></script>        <!-- Catálogo mock -->
+    <script src="components/navbar.js"></script>     <!-- Inyecta navbar -->
+    <script src="components/footer.js"></script>     <!-- Inyecta footer -->
+    <script src="components/cart.js"></script>       <!-- Lógica del side-cart -->
+    <script src="assets/js/products.js"></script>    <!-- Render de productos -->
+    <script src="assets/js/main.js"></script>        <!-- Bootstrap de la página -->
+</body>
+</html>

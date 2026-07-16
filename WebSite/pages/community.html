@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================================
+         KYRO - Comunidad
+         Espacio dedicado a personas que crean y comparten.
+         ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidad — Kyro</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../components/navbar.css" />
+    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="../components/cart.css" />
+    <link rel="stylesheet" href="../components/community-gallery.css" />
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <main class="community-page">
+        <header class="page-header">
+            <h1>Comunidad Kyro</h1>
+            <p>
+                Las personas que usan Kyro también crean. Acá reunimos sus fotos,
+                modificaciones y aportes al proyecto.
+            </p>
+        </header>
+
+        <!-- Feed principal: mezcla de galería y posts -->
+        <section class="community-feed" aria-label="Feed comunitario">
+            <div id="community-grid" class="community-grid">
+                <!-- Renderizado por assets/js/community.js -->
+            </div>
+        </section>
+
+        <!-- CTA para enviar aportes -->
+        <section class="community-cta" aria-labelledby="community-cta-title">
+            <h2 id="community-cta-title">¿Tenés algo para compartir?</h2>
+            <p>Subí tu foto, tu versión de un diseño o un tutorial.</p>
+            <a href="#" class="btn-primary">Enviar aporte</a>
+        </section>
+    </main>
+
+    <div id="footer-root"></div>
+    <aside id="side-cart" class="side-cart" aria-hidden="true"></aside>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/cart.js"></script>
+    <script src="../assets/js/community.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

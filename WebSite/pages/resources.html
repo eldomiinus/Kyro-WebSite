@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================================
+         KYRO - Recursos Open Source
+         Descargas directas de archivos gráficos bajo licencia MIT.
+         ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos Open Source — Kyro</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../components/navbar.css" />
+    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="../components/cart.css" />
+    <link rel="stylesheet" href="../components/resources.css" />
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <main class="resources-page">
+        <header class="page-header">
+            <h1>Recursos Open Source</h1>
+            <p>
+                Todo lo que publicamos acá es libre: podés descargarlo, modificarlo
+                y producir tu propia versión, incluso para vender, mientras respetes
+                la licencia MIT.
+            </p>
+        </header>
+
+        <!-- Bloque de licencia destacado -->
+        <section class="license-banner" aria-label="Aviso de licencia">
+            <strong>Licencia MIT</strong> — Usá, modificá y distribuí libremente.
+            Mantené el aviso de copyright original.
+        </section>
+
+        <!-- Listado de archivos descargables -->
+        <section class="resources-list" aria-labelledby="resources-list-title">
+            <h2 id="resources-list-title">Descargas</h2>
+            <ul id="resources-grid" class="resources-grid">
+                <!-- Renderizado por assets/js/resources.js -->
+            </ul>
+        </section>
+
+        <!-- Sección "Cómo usar" -->
+        <section class="how-to" aria-labelledby="how-to-title">
+            <h2 id="how-to-title">Cómo usar estos recursos</h2>
+            <ol>
+                <li>Descargá el archivo que te interese.</li>
+                <li>Imprimilo en la prenda o soporte que prefieras.</li>
+                <li>Si lo modificás, mantené la licencia MIT.</li>
+                <li>Opcional: compartí tu versión en la <a href="community.html">comunidad</a>.</li>
+            </ol>
+        </section>
+    </main>
+
+    <div id="footer-root"></div>
+    <aside id="side-cart" class="side-cart" aria-hidden="true"></aside>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/cart.js"></script>
+    <script src="../assets/js/resources.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

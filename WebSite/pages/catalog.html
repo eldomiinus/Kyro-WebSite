@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================================
+         KYRO - Catálogo / Tienda
+         Grilla de productos + barra lateral de filtros.
+         ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo — Kyro</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../components/navbar.css" />
+    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="../components/cart.css" />
+    <link rel="stylesheet" href="../components/filters.css" />
+    <link rel="stylesheet" href="../components/product-card.css" />
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <main class="catalog-layout">
+        <!-- BARRA LATERAL DE FILTROS -->
+        <aside class="filters" aria-labelledby="filters-title">
+            <h2 id="filters-title">Filtros</h2>
+
+            <form id="filters-form" class="filters-form">
+                <fieldset>
+                    <legend>Categoría</legend>
+                    <label><input type="checkbox" name="category" value="prenda" /> Prenda</label>
+                    <label><input type="checkbox" name="category" value="accesorio" /> Accesorio</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tipo</legend>
+                    <label><input type="checkbox" name="type" value="remera" /> Remera</label>
+                    <label><input type="checkbox" name="type" value="hoodie" /> Hoodie</label>
+                    <label><input type="checkbox" name="type" value="buzo" /> Buzo</label>
+                    <label><input type="checkbox" name="type" value="pin" /> Pin</label>
+                    <label><input type="checkbox" name="type" value="sticker" /> Sticker</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Ordenar por</legend>
+                    <select name="sort">
+                        <option value="relevance">Relevancia</option>
+                        <option value="price-asc">Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                        <option value="name">Nombre (A-Z)</option>
+                    </select>
+                </fieldset>
+
+                <button type="reset" class="btn-secondary">Limpiar filtros</button>
+            </form>
+        </aside>
+
+        <!-- GRILLA DE PRODUCTOS -->
+        <section class="catalog-grid" aria-labelledby="catalog-title">
+            <header class="catalog-header">
+                <h1 id="catalog-title">Catálogo</h1>
+                <p class="catalog-count" id="catalog-count">Cargando productos…</p>
+            </header>
+
+            <div id="products-grid" class="products-grid">
+                <!-- Renderizado por assets/js/products.js -->
+            </div>
+
+            <p id="catalog-empty" class="empty-state" hidden>
+                No hay productos que coincidan con los filtros seleccionados.
+            </p>
+        </section>
+    </main>
+
+    <div id="footer-root"></div>
+    <aside id="side-cart" class="side-cart" aria-hidden="true"></aside>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/cart.js"></script>
+    <script src="../components/filters.js"></script>
+    <script src="../assets/js/products.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

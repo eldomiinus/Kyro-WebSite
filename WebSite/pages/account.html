@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================================
+         KYRO - Cuenta de usuario
+         Inicio de sesión y registro. La autenticación real se
+         conectará luego a un backend: este archivo sólo maneja
+         el esqueleto y la validación del lado cliente.
+         ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi cuenta — Kyro</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../components/navbar.css" />
+    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="../components/cart.css" />
+    <link rel="stylesheet" href="../components/account.css" />
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <main class="account-page">
+        <header class="page-header">
+            <h1>Mi cuenta</h1>
+            <p>Accedé para ver tus aportes a la comunidad y tu historial.</p>
+        </header>
+
+        <!-- Contenedor con dos formularios: login y registro -->
+        <div class="auth-container">
+            <!-- LOGIN -->
+            <section class="auth-card" aria-labelledby="login-title">
+                <h2 id="login-title">Iniciar sesión</h2>
+                <form id="login-form" class="auth-form" novalidate>
+                    <label>
+                        Correo electrónico
+                        <input type="email" name="email" required autocomplete="email" />
+                    </label>
+                    <label>
+                        Contraseña
+                        <input type="password" name="password" required autocomplete="current-password" minlength="6" />
+                    </label>
+                    <button type="submit" class="btn-primary">Entrar</button>
+                    <p id="login-feedback" class="form-feedback" role="status"></p>
+                </form>
+            </section>
+
+            <!-- REGISTRO -->
+            <section class="auth-card" aria-labelledby="register-title">
+                <h2 id="register-title">Crear cuenta</h2>
+                <form id="register-form" class="auth-form" novalidate>
+                    <label>
+                        Nombre de usuario
+                        <input type="text" name="username" required minlength="3" autocomplete="username" />
+                    </label>
+                    <label>
+                        Correo electrónico
+                        <input type="email" name="email" required autocomplete="email" />
+                    </label>
+                    <label>
+                        Contraseña
+                        <input type="password" name="password" required minlength="6" autocomplete="new-password" />
+                    </label>
+                    <label>
+                        Repetir contraseña
+                        <input type="password" name="passwordConfirm" required minlength="6" autocomplete="new-password" />
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="terms" required />
+                        Acepto los términos y la licencia MIT del proyecto.
+                    </label>
+                    <button type="submit" class="btn-primary">Registrarme</button>
+                    <p id="register-feedback" class="form-feedback" role="status"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-root"></div>
+    <aside id="side-cart" class="side-cart" aria-hidden="true"></aside>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/cart.js"></script>
+    <script src="../assets/js/account.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

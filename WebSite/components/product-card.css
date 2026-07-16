@@ -1,0 +1,66 @@
+/* =====================================================================
+   KYRO — product-card.css
+   Tarjeta usada en la grilla del catálogo y la página de inicio.
+   ===================================================================== */
+
+.product-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.product-card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;       /* Imágenes grandes: el cuadrado domina */
+  background: var(--color-surface);
+  object-fit: cover;
+}
+.product-card-body {
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+.product-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+.product-card-price {
+  color: var(--color-text);
+  font-weight: 700;
+}
+.product-card-category {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.product-card-actions {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+.product-card-btn {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  text-align: center;
+}
+.product-card-btn--primary {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
