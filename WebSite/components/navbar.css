@@ -14,11 +14,10 @@
   display: flex;
   align-items: center;
 }
-
 .navbar-inner {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-3);
   width: 100%;
   max-width: var(--container-max);
   margin: 0 auto;
@@ -32,23 +31,25 @@
   font-weight: 700;
   color: var(--color-text);
   letter-spacing: 0.05em;
+  flex-shrink: 0;
 }
 .navbar-logo span { color: var(--color-accent); }
 
 /* Links de navegación */
 .navbar-links {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-1);
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-left: var(--space-4);
 }
 .navbar-links a {
   color: var(--color-text);
   font-weight: 500;
-  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.65rem;
   border-radius: var(--radius-sm);
+  white-space: nowrap;
 }
 .navbar-links a:hover {
   background: var(--color-surface);
@@ -61,10 +62,11 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  min-width: 0;
 }
 .navbar-search input {
   width: 100%;
-  max-width: 360px;
+  max-width: 320px;
   padding: 0.5rem 0.85rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -74,11 +76,11 @@
 }
 .navbar-search input:focus { background: var(--color-bg); }
 
-/* Acciones de la derecha (carrito + cuenta) */
+/* Acciones de la derecha (carrito + cuenta + wishlist + sociales) */
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-1);
 }
 .navbar-btn {
   background: transparent;
@@ -87,15 +89,41 @@
   border-radius: var(--radius-md);
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  justify-content: center;
   color: var(--color-text);
-  font-size: 0.95rem;
   position: relative;
 }
 .navbar-btn:hover { background: var(--color-surface); }
 
-/* Badge del carrito */
-.cart-badge {
+/* Grupo de íconos sociales dentro de la navbar */
+.navbar-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-left: var(--space-1);
+  padding-left: var(--space-2);
+  border-left: 1px solid var(--color-border);
+  height: 32px;
+}
+.navbar-social-link {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--color-muted);
+  transition: color var(--transition), background var(--transition);
+}
+.navbar-social-link:hover {
+  color: var(--color-text);
+  background: var(--color-surface);
+  opacity: 1;
+}
+
+/* Badge reutilizable (carrito y wishlist) */
+.cart-badge,
+.wishlist-badge {
   background: var(--color-accent);
   color: #fff;
   font-size: 0.7rem;
@@ -108,8 +136,11 @@
   transform: translate(40%, -20%);
 }
 
-/* Responsive: en pantallas chicas el menú se colapsa */
-@media (max-width: 768px) {
+/* Responsive: en pantallas chicas se ocultan los links y sociales */
+@media (max-width: 900px) {
   .navbar-links { display: none; }
+  .navbar-socials { display: none; }
+}
+@media (max-width: 600px) {
   .navbar-search { display: none; }
 }

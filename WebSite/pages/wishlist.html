@@ -2,30 +2,44 @@
 <html lang="es">
 <head>
     <!-- ============================================================
-         KYRO - Página individual de producto
-         Estructura semántica con:
-         - Bloque "Transparencia de Costos"
-         - "Galería Comunitaria" en lugar de reseñas tradicionales
-         Los datos se cargan vía ?id=xxx y /assets/js/data.js
+         KYRO - Lista de Deseos
+         Muestra los productos marcados con el corazón.
          ============================================================ -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Producto — Kyro</title>
+    <title>Lista de deseos — Kyro</title>
 
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../components/navbar.css" />
     <link rel="stylesheet" href="../components/footer.css" />
     <link rel="stylesheet" href="../components/cart.css" />
     <link rel="stylesheet" href="../components/wishlist.css" />
-    <link rel="stylesheet" href="../components/product-detail.css" />
-    <link rel="stylesheet" href="../components/community-gallery.css" />
+    <link rel="stylesheet" href="../components/product-card.css" />
 </head>
 <body>
     <div id="navbar-root"></div>
 
-    <main id="product-detail" class="product-detail">
-        <!-- Renderizado por assets/js/product-detail.js -->
-        <p class="loading">Cargando producto…</p>
+    <main class="wishlist-page">
+        <header class="wishlist-header">
+            <div>
+                <h1>Mi lista de deseos</h1>
+                <p id="wishlist-count">Cargando…</p>
+            </div>
+            <div class="wishlist-actions">
+                <button type="button" class="btn-secondary" id="clear-wishlist">Vaciar lista</button>
+                <a class="btn-primary" href="catalog.html">Seguir explorando</a>
+            </div>
+        </header>
+
+        <div id="wishlist-grid" class="products-grid">
+            <!-- Renderizado por assets/js/wishlist-page.js -->
+        </div>
+
+        <p id="wishlist-empty" class="empty-state" hidden>
+            Aún no marcaste ningún producto con el corazón.
+            <br />
+            <a href="catalog.html">Ir al catálogo</a> para empezar.
+        </p>
     </main>
 
     <div id="footer-root"></div>
@@ -38,7 +52,7 @@
     <script src="../components/footer.js"></script>
     <script src="../components/cart.js"></script>
     <script src="../components/wishlist.js"></script>
-    <script src="../assets/js/product-detail.js"></script>
+    <script src="../assets/js/wishlist-page.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 </html>

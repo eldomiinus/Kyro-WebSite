@@ -1,0 +1,68 @@
+/* =====================================================================
+   KYRO — blog.css
+   Estilos del feed de artículos en /pages/blog.html
+   ===================================================================== */
+
+.blog-page {
+  max-width: var(--container-max);
+  margin: var(--space-5) auto;
+  padding: 0 var(--space-4);
+}
+.blog-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: var(--space-4);
+}
+
+.article-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.article-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--color-surface);
+  object-fit: cover;
+}
+.article-card-body {
+  padding: var(--space-3) var(--space-4) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+.article-card-meta {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.article-card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+.article-card-excerpt {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+.article-card-link {
+  margin-top: auto;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.article-card-link:hover { text-decoration: underline; }

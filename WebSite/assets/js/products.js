@@ -8,6 +8,12 @@
 (function () {
   "use strict";
 
+  /** Devuelve el HTML del corazón (ícono SVG si social.js está cargado). */
+  function heartIcon() {
+    var socials = (window.KYROSocial && window.KYROSocial.icon) || function () { return "♡"; };
+    return socials("heart");
+  }
+
   /**
    * Crea el HTML de una tarjeta de producto.
    * @param {Object} product  — entrada de KYRO.products
@@ -17,6 +23,13 @@
     var showAddBtn = showAdd !== false;
     return ''
       + '<article class="product-card" data-id="' + product.id + '">'
+      // Botón de wishlist (corazón) sobre la imagen.
+      +   '<button class="product-card-wishlist" type="button" '
+      +           'data-wishlist-toggle="' + product.id + '" '
+      +           'aria-label="Agregar a la lista de deseos" '
+      +           'aria-pressed="false">'
+      +     heartIcon()
+      +   '</button>'
       +   '<a href="product.html?id=' + product.id + '">'
       +     '<img class="product-card-image" src="' + product.image + '" alt="' + product.name + '" loading="lazy" />'
       +   '</a>'
@@ -36,12 +49,15 @@
 
   /**
    * Renderiza los primeros N productos en un contenedor.
+   * Tras renderizar, sincroniza el estado de los corazones y emite
+   * el evento 'kyro:products-rendered' (lo escucha wishlist.js).
    */
   function renderFeatured(containerId, limit) {
     var container = document.getElementById(containerId);
     if (!container) return;
     var items = KYRO.products.slice(0, limit || 3);
     container.innerHTML = items.map(function (p) { return productCard(p, true); }).join("");
+    afterRender(container);
   }
 
   /**
@@ -62,6 +78,7 @@
       }
       var countEl = document.getElementById("catalog-count");
       if (countEl) countEl.textContent = list.length + " producto" + (list.length === 1 ? "" : "s");
+      afterRender(container);
     }
 
     draw(KYRO.products);
@@ -80,6 +97,19 @@
         });
       }
     }
+  }
+
+  /**
+   * Disparador de eventos posterior al render. La wishlist escucha
+   * 'kyro:products-rendered' para sincronizar el estado de los
+   * corazones sin importar cuándo se monte.
+   */
+  function afterRender(container) {
+    document.dispatchEvent(new CustomEvent("kyro:products-rendered", {
+      bubbles: false,
+      detail: { container: container }
+    }));
+    if (window.KYROWishlist) window.KYROWishlist.refreshUI();
   }
 
   // API pública

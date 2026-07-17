@@ -1,0 +1,123 @@
+/* =====================================================================
+   KYRO — docs.css
+   Layout de la página /pages/docs.html
+   Estilo "Ollama docs": sidebar fija con índice + área de contenido.
+   ===================================================================== */
+
+.docs-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-5);
+  max-width: var(--container-max);
+  margin: var(--space-5) auto;
+  padding: 0 var(--space-4);
+}
+
+/* Sidebar de navegación interna */
+.docs-sidebar {
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-3));
+  align-self: start;
+  max-height: calc(100dvh - var(--navbar-height) - var(--space-5));
+  overflow-y: auto;
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.docs-sidebar h2 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+}
+.docs-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.docs-nav li { margin: 0; }
+.docs-nav a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-left: 3px solid transparent;
+  transition: background var(--transition), color var(--transition);
+}
+.docs-nav a:hover { background: var(--color-bg); opacity: 1; }
+.docs-nav a.is-active {
+  background: var(--color-bg);
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+}
+.docs-nav-group-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  margin: var(--space-4) 0 var(--space-2);
+  padding-left: 0.75rem;
+}
+.docs-nav-group-label:first-child { margin-top: 0; }
+
+/* Contenido principal */
+.docs-content {
+  min-width: 0; /* permite que el contenido se encoja sin desbordar */
+}
+.docs-content h1 { margin-top: 0; font-size: 2.2rem; }
+.docs-content h2 {
+  margin-top: var(--space-5);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  font-size: 1.4rem;
+}
+.docs-content h2:first-of-type { border-top: none; padding-top: 0; }
+.docs-content h3 { margin-top: var(--space-4); font-size: 1.1rem; }
+.docs-content p { max-width: 70ch; }
+.docs-content ul, .docs-content ol { max-width: 70ch; padding-left: 1.4rem; }
+.docs-content li { margin-bottom: 0.35rem; }
+.docs-content code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  background: var(--color-surface);
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+}
+.docs-content pre {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  overflow-x: auto;
+}
+.docs-content pre code { background: transparent; padding: 0; }
+
+/* Bloque "callout" opcional */
+.docs-callout {
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-accent-soft);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-sm);
+  margin: var(--space-3) 0;
+}
+
+/* Anchor offset para compensar la navbar sticky al saltar links */
+.docs-content h2::before,
+.docs-content h3::before {
+  content: "";
+  display: block;
+  height: calc(var(--navbar-height) + var(--space-3));
+  margin-top: calc(-1 * (var(--navbar-height) + var(--space-3)));
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .docs-layout { grid-template-columns: 1fr; }
+  .docs-sidebar { position: static; }
+}

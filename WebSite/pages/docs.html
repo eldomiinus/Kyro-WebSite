@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ============================================================
+         KYRO - Documentación
+         Layout de dos columnas estilo "Ollama docs":
+           - Sidebar izquierdo con índice de navegación
+           - Contenido principal a la derecha
+         ============================================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docs — Kyro</title>
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../components/navbar.css" />
+    <link rel="stylesheet" href="../components/footer.css" />
+    <link rel="stylesheet" href="../components/cart.css" />
+    <link rel="stylesheet" href="../components/wishlist.css" />
+    <link rel="stylesheet" href="../components/docs.css" />
+</head>
+<body>
+    <div id="navbar-root"></div>
+
+    <div class="docs-layout">
+        <!-- SIDEBAR: índice interno de la documentación. -->
+        <aside class="docs-sidebar" aria-label="Índice de documentación">
+            <h2>Documentación</h2>
+            <nav>
+                <ul class="docs-nav">
+                    <li>
+                        <p class="docs-nav-group-label">Primeros pasos</p>
+                        <ul class="docs-nav">
+                            <li><a href="#instalacion">Guía de Instalación</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="docs-nav-group-label">Código</p>
+                        <ul class="docs-nav">
+                            <li><a href="#estructura">Estructura del Proyecto</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="docs-nav-group-label">Producción</p>
+                        <ul class="docs-nav">
+                            <li><a href="#proceso">Proceso de Creación</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <article class="docs-content">
+            <header>
+                <h1>Documentación de Kyro</h1>
+                <p>
+                    Esta sección explica cómo usar el sitio de Kyro como plantilla
+                    y cómo está construido el código. También describe el
+                    proceso manual de producción de la ropa.
+                </p>
+            </header>
+
+            <!-- ====== GUÍA DE INSTALACIÓN ====== -->
+            <section id="instalacion" aria-labelledby="instalacion-title">
+                <h2 id="instalacion-title">Guía de Instalación</h2>
+                <p>
+                    Esta web está construida como un sitio estático sin
+                    dependencias de build. Eso significa que podés clonarla,
+                    personalizarla y servirla en cualquier hosting con
+                    apenas unos pocos comandos.
+                </p>
+
+                <h3>Requisitos</h3>
+                <ul>
+                    <li>Un navegador moderno (Chrome, Firefox, Safari, Edge).</li>
+                    <li>Opcional: Python 3, Node.js o cualquier servidor estático.</li>
+                </ul>
+
+                <h3>Pasos</h3>
+                <ol>
+                    <li>Cloná el repositorio:
+                        <pre><code>git clone https://github.com/eldomiinus/Kyro-WebSite.git</code></pre>
+                    </li>
+                    <li>Entrá a la carpeta del sitio:
+                        <pre><code>cd Kyro-WebSite/WebSite</code></pre>
+                    </li>
+                    <li>Servila localmente:
+                        <pre><code>python3 -m http.server 8080</code></pre>
+                    </li>
+                    <li>Abrí <a href="../index.html">el sitio</a> en <code>http://localhost:8080</code>.</li>
+                </ol>
+
+                <div class="docs-callout">
+                    <strong>Tip:</strong> Como no hay build, los cambios que hagas
+                    en <code>index.html</code>, los CSS o los JS se reflejan
+                    instantáneamente con un refresh del navegador.
+                </div>
+            </section>
+
+            <!-- ====== ESTRUCTURA DEL PROYECTO ====== -->
+            <section id="estructura" aria-labelledby="estructura-title">
+                <h2 id="estructura-title">Estructura del Proyecto</h2>
+                <p>
+                    El código está organizado en módulos independientes. Cada
+                    archivo tiene una única responsabilidad y expone una API
+                    global bajo <code>window.KYRO*</code>.
+                </p>
+
+                <h3>Árbol de carpetas</h3>
+                <pre><code>WebSite/
+├── index.html              → Página de inicio
+├── pages/                  → Catálogo, producto, comunidad, recursos, cuenta, docs, blog, wishlist
+├── components/             → Componentes UI (navbar, footer, cart, wishlist, …)
+│   ├── navbar.js / navbar.css
+│   ├── footer.js / footer.css
+│   ├── cart.js   / cart.css
+│   ├── wishlist.js / wishlist.css
+│   ├── filters.js / filters.css
+│   └── …
+├── assets/
+│   ├── css/main.css        → Variables, reset, layout base
+│   ├── js/                 → Capa de datos y lógica de páginas
+│   └── img/                → Imágenes (placeholders por ahora)
+└── README.md</code></pre>
+
+                <h3>Capas</h3>
+                <ul>
+                    <li><strong>Datos</strong> (<code>assets/js/data.js</code>): única fuente de productos, comunidad y recursos. Se reemplaza por la API.</li>
+                    <li><strong>Componentes</strong>: navbar, footer, cart, wishlist, filters. Reusables en todas las páginas.</li>
+                    <li><strong>Páginas</strong>: un <code>.js</code> por página que renderiza su contenido en un contenedor.</li>
+                    <li><strong>Bootstrap</strong> (<code>main.js</code>): detecta la ruta actual y dispara la lógica correspondiente.</li>
+                </ul>
+
+                <h3>Cómo añadir una nueva página</h3>
+                <ol>
+                    <li>Creá <code>pages/mi-pagina.html</code> con la estructura base.</li>
+                    <li>Creá <code>assets/js/mi-pagina.js</code> que exponga <code>window.KYROMiPagina</code>.</li>
+                    <li>Agregá el <code>&lt;script&gt;</code> y un caso en <code>main.js</code>.</li>
+                </ol>
+            </section>
+
+            <!-- ====== PROCESO DE CREACIÓN ====== -->
+            <section id="proceso" aria-labelledby="proceso-title">
+                <h2 id="proceso-title">Proceso de Creación</h2>
+                <p>
+                    Toda la ropa de Kyro se hace a mano, pieza por pieza.
+                    Este es el flujo general que seguimos para producir cada
+                    prenda, desde la selección del textil hasta el empaquetado.
+                </p>
+
+                <h3>1. Selección del textil</h3>
+                <p>
+                    Trabajamos con remeras de algodón e hilos aptos para
+                    estampa. El textil se compra al por mayor para reducir
+                    costos y mantener los precios accesibles.
+                </p>
+
+                <h3>2. Diseño y serigrafiado</h3>
+                <p>
+                    Los diseños nacen como archivos abiertos (SVG, PNG de alta
+                    resolución) que después se suben a la sección de
+                    <a href="resources.html">Recursos Open Source</a> para que
+                    cualquier persona pueda replicarlos.
+                </p>
+
+                <h3>3. Curado y empaquetado</h3>
+                <p>
+                    Cada pieza se inspecciona, se dobla y se embala en
+                    envoltorio reciclado. La etiqueta incluye el nombre del
+                    producto, su costo desglosado y un QR que dirige a la
+                    página individual del producto, donde se ve el
+                    desglose de costos completo.
+                </p>
+
+                <h3>4. Distribución</h3>
+                <p>
+                    Las prendas se entregan en mano en la ciudad o se envían
+                    por correo. Los costos fijos (envío, mantenimiento de
+                    sitio, estampas) están desglosados en cada producto.
+                </p>
+
+                <div class="docs-callout">
+                    La sección <strong>Transparencia de Costos</strong> en la
+                    página de cada producto es la columna vertebral de Kyro:
+                    no es un detalle más, es el corazón del proyecto.
+                </div>
+            </section>
+        </article>
+    </div>
+
+    <div id="footer-root"></div>
+    <aside id="side-cart" class="side-cart" aria-hidden="true"></aside>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+
+    <script src="../assets/js/data.js"></script>
+    <script src="../assets/js/social.js"></script>
+    <script src="../components/navbar.js"></script>
+    <script src="../components/footer.js"></script>
+    <script src="../components/cart.js"></script>
+    <script src="../components/wishlist.js"></script>
+    <script src="../assets/js/docs.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

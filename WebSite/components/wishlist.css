@@ -1,0 +1,66 @@
+/* =====================================================================
+   KYRO — wishlist.css
+   Estilos del corazón en tarjetas + drawer opcional de wishlist.
+   ===================================================================== */
+
+/* Botón corazón dentro de la tarjeta de producto */
+.product-card-wishlist {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-muted);
+  cursor: pointer;
+  z-index: 2;
+  transition: color var(--transition), transform var(--transition), background var(--transition);
+}
+.product-card-wishlist:hover {
+  color: var(--color-accent);
+  transform: scale(1.06);
+}
+.product-card-wishlist.is-active {
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+/* Necesitamos que la tarjeta posicione relativo para el corazón */
+.product-card { position: relative; }
+
+/* Badge de la wishlist en la navbar (espejo del cart-badge) */
+.wishlist-badge {
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.4rem;
+  border-radius: 999px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(40%, -20%);
+}
+
+/* Página wishlist.html */
+.wishlist-page {
+  max-width: var(--container-max);
+  margin: var(--space-5) auto;
+  padding: 0 var(--space-4);
+}
+.wishlist-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.wishlist-header p { color: var(--color-muted); margin: 0; }
+.wishlist-actions { display: flex; gap: var(--space-2); }

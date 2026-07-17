@@ -2,30 +2,41 @@
 <html lang="es">
 <head>
     <!-- ============================================================
-         KYRO - Página individual de producto
-         Estructura semántica con:
-         - Bloque "Transparencia de Costos"
-         - "Galería Comunitaria" en lugar de reseñas tradicionales
-         Los datos se cargan vía ?id=xxx y /assets/js/data.js
+         KYRO - Blog
+         Feed de artículos con tarjeta estándar: imagen, fecha,
+         título y extracto.
+         Los artículos se sirven desde KYRO.articles (data.js).
          ============================================================ -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Producto — Kyro</title>
+    <title>Blog — Kyro</title>
 
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../components/navbar.css" />
     <link rel="stylesheet" href="../components/footer.css" />
     <link rel="stylesheet" href="../components/cart.css" />
     <link rel="stylesheet" href="../components/wishlist.css" />
-    <link rel="stylesheet" href="../components/product-detail.css" />
-    <link rel="stylesheet" href="../components/community-gallery.css" />
+    <link rel="stylesheet" href="../components/blog.css" />
 </head>
 <body>
     <div id="navbar-root"></div>
 
-    <main id="product-detail" class="product-detail">
-        <!-- Renderizado por assets/js/product-detail.js -->
-        <p class="loading">Cargando producto…</p>
+    <main class="blog-page">
+        <header class="page-header">
+            <h1>Blog</h1>
+            <p>
+                Novedades del proyecto, anuncios de nuevos diseños, procesos
+                manuales y cualquier cosa que la comunidad quiera compartir.
+            </p>
+        </header>
+
+        <div id="blog-grid" class="blog-grid">
+            <!-- Renderizado por assets/js/blog.js -->
+        </div>
+
+        <p id="blog-empty" class="empty-state" hidden>
+            Aún no hay artículos publicados.
+        </p>
     </main>
 
     <div id="footer-root"></div>
@@ -38,7 +49,7 @@
     <script src="../components/footer.js"></script>
     <script src="../components/cart.js"></script>
     <script src="../components/wishlist.js"></script>
-    <script src="../assets/js/product-detail.js"></script>
+    <script src="../assets/js/blog.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
